@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'development',
@@ -16,6 +18,7 @@ module.exports = {
       template: './public/index.html', //이거 작성 꼭 할 것. 안하면 에러남
     }),
     new MiniCssExtractPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
   module: {
     //모듈 연결 설정
