@@ -35,7 +35,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'docs'), //깃허브 배포 위해 docs 설정
     clean: true,
   },
